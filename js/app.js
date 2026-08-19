@@ -13,7 +13,7 @@ const DATA = {
     portfolioUrl: "https://mr-irtaza.github.io",
     githubUrl:    "https://github.com/Mr-Irtaza",
     linkedinUrl:  "https://linkedin.com/in/mr-irtaza",
-    avatar:       "./assets/Irtaza.JPG",
+    avatar:       "./assets/Irtaza.avif",
     bio1: "WordPress and front-end developer with about a year of commercial experience — building membership sites, WooCommerce flows, and Oxygen Builder components for agency and healthcare clients, mostly for the US market.",
     bio2: "Alongside client work I'm building MedHub.pk from scratch — design system, product catalog and front end. Currently picking up React and the MERN stack for projects that outgrow what WordPress can comfortably do."
   },
@@ -48,35 +48,35 @@ const DATA = {
       title: "Close Minded Philosophy", url: "https://closemindedphilosophy.com",
       desc: "Membership site with conditional access rules — content gated by WooCommerce tier, enforced server-side rather than just hiding DOM elements.",
       tags: ["WordPress","Oxygen Builder","WooCommerce","ACF"],
-      image: "./Gallery/CMP - 1.png"
+      image: "./Gallery/CMP - 1.avif"
     },
     {
       id: 2, slug: "medhub",
       title: "MedHub", url: "https://medhub.pk",
       desc: "Front end and design system for a specialty medicine sourcing platform. Built component library, product catalog structure and page templates from scratch.",
       tags: ["WordPress","Oxygen Builder","WooCommerce","SEO"],
-      image: "./Gallery/Medhub - 1.png"
+      image: "./Gallery/Medhub - 1.avif"
     },
     {
       id: 3, slug: "yourcompanygo",
       title: "Company Go", url: "https://yourcompanygo.com",
       desc: "Ongoing maintenance and component work for the agency's own site — decoupling reusable Oxygen blocks and trimming page weight for faster loads.",
       tags: ["WordPress","Oxygen Builder","Optimization","JS"],
-      image: "./Gallery/YCG - 1.png"
+      image: "./Gallery/YCG - 1.avif"
     },
     {
       id: 4, slug: "cgbusinesssolutions",
       title: "CG Business Solutions", url: "https://cgbusinesssolutions.com",
       desc: "Corporate site for a digital media agency — portfolio-first layout designed to move visitors toward a contact form quickly.",
       tags: ["WordPress","Oxygen Builder","Custom UI","Responsive"],
-      image: "./Gallery/CBS - 1.png"
+      image: "./Gallery/CBS - 1.avif"
     },
     {
       id: 5, slug: "yourealifesaver",
       title: "Your Real Life Saver", url: "https://yourealifesaver.org",
       desc: "US non-profit site honouring first responders, with hero profiles and a donation flow built on WooCommerce.",
       tags: ["WordPress","Oxygen Builder","WooCommerce","Non-profit"],
-      image: "./Gallery/YRLS - 1.png"
+      image: "./Gallery/YRLS - 1.avif"
     }
   ],
 
@@ -102,7 +102,7 @@ const DATA = {
 
   
   certificates: [
-    { name: "CS50 — Scratch", issuer: "Harvard University / edX", icon: "fa-solid fa-certificate", done: true, customImage: "./Gallery/1 - CS50S.png" },
+    { name: "CS50 — Scratch", issuer: "Harvard University / edX", icon: "fa-solid fa-certificate", done: true, customImage: "./Gallery/1 - CS50S.avif" },
     { name: "Responsive Web Design", issuer: "freeCodeCamp", icon: "fa-solid fa-mobile-screen-button", done: false, customImage: "" }, 
     { name: "CS50: Introduction to Computer Science", issuer: "Harvard University / edX", icon: "fa-solid fa-graduation-cap", done: false, customImage: "" },
     { name: "3-Year Software Engineering Diploma", issuer: "Aptech Educational Institute", icon: "fa-solid fa-award", done: false, customImage: "" }
