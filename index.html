@@ -1,465 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <!-- Default Meta Tag -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>Mr-Irtaza</title>
-    <!-- Favicon -->
-    <link rel="icon" id="" href="./assets/images/Mr-Irtaza_Logo.svg" type="image/gif" sizes="100x100">
-    <!-- Font Link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Animate CSS Link -->
-    <link rel="stylesheet" href="./lib/WOW-master/css/libs/animate.css">
-    <!-- Font Awesome 5 CDN/Icon Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Fancybox Image Gallery -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-    <!-- Slider CSS Link -->
-    <link rel="stylesheet" href="./lib/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="./lib/slick-1.8.1/slick/slick-theme.css">
-    <!-- Bootstrap CSS Link -->
-    <link rel="stylesheet" href="./lib/bootstrap-5/css/bootstrap.min.css">
-    <!-- Main CSS Link -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Responsive CSS Link -->
-    <link rel="stylesheet" href="./assets/css/responsive.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Irtaza — WordPress &amp; Front-End Developer</title>
+<meta name="description" content="Muhammad Irtaza is a WordPress and front-end developer based in Rawalpindi, Pakistan — building performant sites with Oxygen Builder, WooCommerce, React and the MERN stack.">
+<meta name="keywords" content="Muhammad Irtaza, WordPress Developer, Oxygen Builder, Front-End, React, MERN, Rawalpindi, Pakistan">
+<link rel="canonical" href="https://mr-irtaza.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Muhammad Irtaza — WordPress &amp; Front-End Developer">
+<meta property="og:description" content="Sites and web systems for agencies, healthcare, and independent clients.">
+<meta property="og:url" content="https://mr-irtaza.github.io/">
+<link rel="icon" type="image/png" href="./assets/Mr-Irtaza Dark Logo.png">
+
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="./css/style.css">
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org/","@type":"Person","name":"Muhammad Irtaza","jobTitle":"WordPress Developer & Front-End Engineer","url":"https://mr-irtaza.github.io/","sameAs":["https://linkedin.com/in/mr-irtaza","https://github.com/Mr-Irtaza"],"address":{"@type":"PostalAddress","addressLocality":"Rawalpindi","addressRegion":"Punjab","addressCountry":"Pakistan"}}
+</script>
 </head>
 <body>
-    <!--  Preloader Start  -->
-    <div class="preloader">
-        <img src="./assets/images/Mr-Irtaza_SVG.svg" alt="Preloader Logo">
+
+<a href="#top" class="skip-link">Skip to main content</a>
+
+<!-- SPLASH SCREEN -->
+<div id="splash-screen" aria-hidden="true">
+  <div class="splash-inner">
+    <img class="splash-logo" src="./assets/Mr-Irtaza Dark Logo.png" alt="" width="46" height="46">
+    <div class="splash-dots"><span></span><span></span><span></span></div>
+  </div>
+</div>
+
+<div id="app">
+
+  <!-- NAV -->
+  <header class="site-header" :class="{scrolled:isScrolled}">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#top" class="nav-logo">
+          <img class="nav-logo-img" src="./assets/Mr-Irtaza Dark Logo.png" alt="Mr-Irtaza logo" width="30" height="30">
+          <span class="nav-logo-name">Mr<span>.</span>Irtaza</span>
+        </a>
+        <nav class="nav-menu" aria-label="Primary">
+          <a href="#skills"       class="nav-link">Skills</a>
+          <a href="#projects"     class="nav-link">Projects</a>
+          <a href="#experience"   class="nav-link">Experience</a>
+          <a href="#certificates" class="nav-link">Certificates</a>
+          <a href="#contact"      class="nav-link">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" @click="toggleTheme" :aria-label="theme==='dark' ? 'Switch to light theme' : 'Switch to dark theme'">
+            <i :class="theme==='dark' ? 'fa-solid fa-sun':'fa-solid fa-moon'" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
     </div>
-    <!--  Preloader End  -->
+  </header>
 
-    <!-- Header Start -->
-    <header class="d2c_navbar sticky-top">
-        <div class="container">
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg px-0 py-0" id="d2c_main_nav">
-                <!-- Logo -->
-                <a class="navbar-brand" href="./index.html"><img src="./assets/images/Mr-Irtaza_SVG.svg" class="w-auto" alt="Logo"></a>
-                <!-- Logo -->
-                <!-- HamBurger -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><i class="fas fa-bars"></i></span>
-                </button>
-                <!-- HamBurger -->
-                <!-- Nav Item -->
-                <div class="collapse navbar-collapse js-clone-nav justify-content-center">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#home">home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skill">Skill</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#work">Work</a>
-                        </li>
-                        <li class="nav-item pt-1">
-                            <a href="#contact" class="btn nav-link d-block d-lg-none">lets talk</a>
-                        </li>
-                    </ul>
-                </div>
-                <a href="#contact" class="btn d-none d-lg-block">lets talk</a>
-                <!-- Nav Item -->
-            </nav>
-            <!-- Navbar -->
-            <!-- Tab and Mobile View -->
-            <div class="collapse navbar-collapse d2c_mobile_view" id="navbarSupportedContent">
-                <div class="show_width container">
-                    <div class="text-right">
-                        <button class="navbar-toggler d2c_cross_btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span><i class="fa fa-times"></i></span>
-                        </button>
-                    </div>
+  <main id="top">
 
-                    <div class="navbar px-0 d2c_mobile_view_body"></div>
-                </div>
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-layout">
+          <div>
+            <div class="status-chip">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>{{ profile.status }}</span>
             </div>
-            <!-- Tab and Mobile View -->
-        </div>
-    </header>
-    <!-- Header End -->
-
-    <main data-bs-spy="scroll" data-bs-target="#d2c_main_nav" class="position-relative">
-        <!-- Hero Section Start -->
-        <section class="d2c_hero_wrapper position-relative" id="home">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 mb-5 mb-lg-0 text-center text-md-start wow fadeInLeft">
-                        <h1>Hi! I'm an Front-End Web Developer Intern</h1>
-                        <p>I'm a learining <strong>Front-End Web Developer</strong> with <em>extensive learning</em> of over <strong>1 Year</strong>. My expertise is in Creating & Designing Websites, Mobile Apps, and Desktop Applications.</p>
-                        <a href="https://drive.google.com/drive/folders/1OcnM0XMiRLTV_mVvBE6TUsXg9T1Olp9C?usp=sharing" target="_blank" class="btn d2c_secondary_btn">Download CV📥</a>
-                        <a href="#contact" class="btn">Hire Me💼</a>
-                        <ul class="d2c_social_link list-group list-group-horizontal mt-2 justify-content-center">
-                            <li>
-                                <a href="https://github.com/Mr-Irtaza" target="_blank"><i class="fab fa-github"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://linkedin.com/in/mr-irtaza/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://app.daily.dev/irtaza7/" target="_blank"><i class="fab fa-dev"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://stackoverflow.com/users/29438200/mr-irtaza" target="_blank"><i class="fab fa-stack-overflow"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d2c_hero_right wow fadeInRight">
-                            <img src="./assets/images/Main.png" class="img-fluid" alt="Hero Image">
-                        </div>
-                    </div>
-                </div>
+            <h1 class="hero-title">{{ profile.name }}</h1>
+            <div class="hero-subtitle">{{ profile.title }}</div>
+            <div class="hero-bio">
+              <p>{{ profile.bio1 }}</p>
+              <p>{{ profile.bio2 }}</p>
             </div>
-            <img src="./assets/images/triangle_element.png" alt="Triangle Element">
-            <img src="./assets/images/horizontal_wave.png" alt="Horizontal Wave">
-            <img src="./assets/images/vertical_wave.png" alt="Vertical Wave">
-        </section>
-        <!-- Hero Section End -->
-
-        <div class="d2c_about_expertise_bg">
-            <!-- About Section Start -->
-            <section class="d2c_about_wrapper position-relative" id="about">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 order-1 order-lg-0">
-                            <div class="d2c_about_left position-relative wow fadeInLeft">
-                                <img src="./assets/images/Main_1.png" class="img-fluid" alt="About Image">
-                                <div class="d2c_about_card wow fadeInUp">
-                                    <h3 class="mb-lg-2 mb-xxl-3">Entry-Level Programmer</h3>
-                                    <div id="counters_2">
-                                        <p class="mb-0"><span class="count" data-TargetNum="180">2</span>+ project complete</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 ps-3 ps-lg-5 order-0 order-lg-1 mb-4 mb-md-5 mb-lg-0 wow fadeInRight">
-                            <h6>About me</h6>
-                            <h2 class="mb-3">I Love Learning & Building New Things</h2>
-                            <p>I am a passionate <strong>Web Developer & UI/UX Designer</strong> constantly learning and evolving in the field. With hands-on experience in <strong>web design, development, and SEO,</strong> I have built dynamic and visually appealing websites that combine creativity with functionality. I strive to make every project <strong>efficient, user-friendly, and engaging.</strong></p>
-                            <h5 class="mb-lg-2 mb-xl-3">Smart Work</h5>
-                            <p class="mb-lg-3 mb-xxl-4">I have contributed to <strong>front-end projects,</strong> ensuring seamless functionality and responsive design. My expertise includes <strong>HTML, CSS, JavaScript, React, and Jquery,</strong> along with UI/UX tools like <strong>Adobe XD and Figma.</strong></p>
-                            <h5 class="mb-lg-2 mb-xl-3">Modern Work</h5>
-                            <p class="mb-3 mb-md-0">I’ve worked with <strong>WordPress, Git, and various modern frameworks,</strong> creating SEO-optimized websites and e-commerce platforms. I value <strong>innovation and efficiency,</strong> continuously exploring new technologies to enhance user experiences.</p>
-                        </div>
-                    </div>
-                </div>
-                <img src="./assets/images/triangle_element.png" alt="Triangle Element">
-                <img src="./assets/images/add_element.png" alt="Add Element">
-                <img src="./assets/images/square_element.png" alt="Square Element">
-            </section>
-            <!-- About Section End -->
-
-            <!-- Hobbies Section Start -->
-            <section class="d2c_hobbies_wrapper position-relative">
-                <div class="container">
-                    <h6 class="text-center">Hobbies</h6>
-                    <h2 class="text-center">Things I Love to Do</h2>
-                    <div class="row">
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Gaining Knowledge</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 mb-md-0 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Learning Skills</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 mb-md-0 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Coding</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 mb-lg-0 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Online Gaming</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 mb-md-0 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Exploring Tech</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 mb-md-0 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Exploring Nature</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Family Meeting</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 mb-xl-0 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Video Editing</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 mb-lg-0 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Teaching</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 mb-md-0 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Bike Riding</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 mb-md-0 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Watching Dou-Huang</h5></div>
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-4 mb-xl-0 wow fadeInUp">
-                            <div class="d2c_card text-center"><h5 class="mb-0">Discover Stories</h5></div>
-                        </div>
-                    </div>
-                </div>
-                <img src="./assets/images/triangle_element.png" alt="Triangle Element">
-                <img src="./assets/images/square_element.png" alt="Square Element">
-            </section>
-            <!-- Hobbies Section End -->
-        </div>
-
-            <!-- Skill Section Start -->
-            <section class="d2c_skill_wrapper position-relative" id="skill">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 text-center text-md-start mb-4 mb-md-5 mb-lg-0 wow fadeInLeft">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-12">
-                                    <h6>my skills</h6>
-                                    <h2 class="mb-3">I am expert in</h2>
-                                    <p class="pe-0 pe-lg-5">I've created and updated websites to learn & show my creativity. I have created Real-Time Projects with the help of React, Flutter, TailwindCSS, AppWrite & TMDB API.</p>
-                                </div>
-                                <div class="col-md-6 col-lg-12">
-                                    <ul class="list-group list-group-horizontal justify-content-center justify-content-lg-start">
-                                        <li class="">
-                                            <span><img class="col-8 col-md-8 col-lg-8 col-xl-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" /></span>
-                                        </li>
-                                        <li>
-                                            <span><img class="col-8 col-md-8 col-lg-8 col-xl-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" /></span>
-                                        </li>
-                                        <li>
-                                            <span><img class="col-7 col-md-7 col-lg-7 col-xl-7" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /></span>
-                                        </li>
-                                    </ul>
-                                    <ul class="list-group list-group-horizontal justify-content-center justify-content-lg-start">
-                                        <li class="mb-0">
-                                            <span><img class="col-8 col-md-8 col-lg-8 col-xl-8 px-1" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" /></span>
-                                        </li>
-                                        <li class="mb-0">
-                                            <span><img class="col-8 col-md-8 col-lg-8 col-xl-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" /></span>
-                                        </li>
-                                        <li class="mb-0">
-                                            <span><img class="col-8 col-md-8 col-lg-8 col-xl-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" /></span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="d2c_skill_right wow fadeInRight">
-                                <img src="./assets/images/Main_0.png" class="img-fluid" alt="Skill Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img src="./assets/images/square_element.png" alt="Square Element">
-                <img src="./assets/images/circle_element.png" alt="Circle Element">
-            </section>
-            <!-- Skill Section End -->
-        </div>
-
-        <div class="d2c_portfolio_pricing_bg">
-            <!-- Portfolio Section Start -->
-            <section class="d2c_portfolio_wrapper position-relative" id="work">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2 text-center">
-
-
-
-
-
-                            <h6>My Portfolio</h6>
-                            <h2 class="mb-3">A little insight about my previous Projects</h2>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. See more on <a href="http://github.com/Mr-Irtaza">GitHub</a></p>
-                        </div>
-                    </div>
-                    <div class="d2c_grid">
-                        <div class="d2c_grid_item wow fadeInLeft mb-4" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/Streaming_Img_1.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInLeft mb-4 mb-lg-0" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/Streaming_Img_2.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInDown mb-4" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/Streaming_Img_3.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInUp mb-4 mb-lg-0" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/Streaming_Img_4.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInRight mb-4" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/SMS_Img_1.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInRight" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/SMS_Img_8.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInRight mb-4" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/SMS_Img_2.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInRight" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/SMS_Img_3.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInRight" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/SMS_Img_4.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInRight" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/SMS_Img_5.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInRight" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/SMS_Img_6.PNG"></a>
-                        </div>
-                        <div class="d2c_grid_item wow fadeInRight" data-wow-duration="2s">
-                            <a data-fancybox="gallery" class="fancybox" href="./assets/images/Portfolio_Images/SMS_Img_7.PNG"></a>
-                        </div>
-                    </div>
-                </div>
-                <img class="mx-2" src="./assets/images/triangle_element.png" alt="Triangle Element">
-                <img src="./assets/images/cross_element.png" alt="Cross Element">
-                <img src="./assets/images/square_element.png" alt="Square Element">
-            </section>
-            <!-- Portfolio Section End -->
-
-            <!-- Contact Section Start -->
-            <section class="d2c_contact_wrapper position-relative" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 mb-4 mb-lg-0 wow fadeInLeft">
-                            <div class="d2c_card">
-                                <h6>contact</h6>
-                                <h2 class="mb-3">get in touch</h2>
-                                <form action="https://api.web3forms.com/submit" method="POST" class="row needs-validation" novalidate>
-                                    <input type="hidden" name="access_key" value="5d4d285a-ee19-46a1-a23f-11cf4edef1c5">
-                                    <div class="col-md-12">
-                                        <input type="text" name="name" class="form-control" id="validationCustomFirstName" placeholder="Name :" autocomplete="on" required>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="input-group has-validation">
-                                            <input type="email" name="email" class="form-control" id="validationCustomEmail" placeholder="Email :" autocomplete="on" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <textarea name="message" class="form-control" rows="5" id="validationCustomMessage" placeholder="Write Message :" required></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn" type="submit">Contact us</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeInRight">
-                            <div class="d2c_card">
-                                <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57714.568746038116!2d73.01799721064688!3d33.52164544710224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df948974419acb%3A0x984357e1632d30f!2sRawalpindi%2C%20Punjab!5e1!3m2!1sen!2s!4v1739110524005!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img src="./assets/images/square_element.png" alt="Square Element">
-                <img src="./assets/images/triangle_element.png" alt="Triangle Element">
-            </section>
-            <!-- Contact Section End -->
-        </div>
-
-        <!-- Footer Section Start -->
-        <footer class="d2c_footer_wrapper">
-            <div class="d2c_footer_bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-4 col-xl-5 mb-5 mb-lg-0 wow fadeInLeft">
-                            <div class="d2c_footer_left">
-                                <a href="./index.html">
-                                    <img src="./assets/images/Mr-Irtaza_Footer.svg" alt="Footer Logo">
-                                </a>
-                                <p class="mb-0">I've been working as web developer for the past year, and have experience in multiple frameworks.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl wow fadeInUp">
-                            <h4>Contact Details</h4>
-                            <ul class="d2c_info_link mb-5 mb-md-0">
-                                <li class="mb-3">
-                                    <a href="tel:0337-6122005">
-                                        <span>
-                                            <i class="fas fa-phone-alt"></i>
-                                        </span>
-                                        0337-6122005
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Mr.Irtaza.2005@gmail.com" target="_blank">
-                                        <span>
-                                            <i class="far fa-envelope"></i>
-                                        </span>
-                                        Mr.Irtaza.2005@gmail.com
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://maps.app.goo.gl/GtRQVUPzw8SXe5Jz7?entry=ttu" target="_blank">
-                                        <span>
-                                            <i class="fas fa-map-marker-alt"></i>
-                                        </span>
-                                        Rawalpindi, Punjab, Pakistan
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl wow fadeInRight">
-                            <h4>Newsletter</h4>
-                            <form class="needs-validation" novalidate>
-                                <div class="input-group">
-                                    <input type="email" class="form-control" placeholder="Enter Email Address:" aria-describedby="newsletter_btn" autocomplete="on" required>
-                                    <button class="btn" type="submit" id="newsletter_btn"><i class="fas fa-paper-plane"></i></button>
-                                </div>
-                            </form>
-                            <ul class="d2c_social_link list-group list-group-horizontal">
-                                <li>
-                                    <a href="https://github.com/Mr-Irtaza" target="_blank"><i class="fab fa-github"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://linkedin.com/in/mr-irtaza/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://app.daily.dev/irtaza7/" target="_blank"><i class="fab fa-dev"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://stackoverflow.com/users/29438200/mr-irtaza" target="_blank"><i class="fab fa-stack-overflow"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-action-row">
+              <a href="./assets/Muhammad Irtaza - Resume.pdf" download class="btn btn-blue"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download CV</a>
+              <a href="#contact" class="btn btn-solid"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Get in touch</a>
             </div>
-        </footer>
-        <!-- Footer Section End -->
-
-        <!-- Copy Right Start -->
-        <div class="d2c_copy_wrapper">
-            <p class="mb-0">&copy; 2025 <a href="https://github.com/Mr-Irtaza" target="_blank">Mr-Irtaza</a>. All Right Reserved</p>
+          </div>
+          <div class="hero-avatar">
+            <img :src="profile.avatar" :alt="profile.name" width="200" height="200" fetchpriority="high">
+          </div>
         </div>
-        <!-- Copy Right End -->
+      </div>
+    </section>
 
-        <!--   Scroll Button Start   -->
-        <div id="scrollBtn">
-            <a href="#">
-                <i class="fas fa-chevron-up"></i>
-            </a>
+    <!-- SKILLS -->
+    <section class="section-wrap" id="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-sub">Technologies and tools I use day-to-day.</p>
+        <div class="skills-grid">
+          <span v-for="skill in skills" :key="skill.name" class="skill-pill">
+            <i :class="skill.icon" aria-hidden="true"></i>{{ skill.name }}
+          </span>
         </div>
-        <!--   Scroll Button  End   -->
-    </main>
+      </div>
+    </section>
 
+    <!-- PROJECTS -->
+    <section class="section-wrap" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Commercial work shipped end-to-end.</p>
+        <div class="projects-grid">
+          <article v-for="p in projects.slice(0, visibleProjects)" :key="p.id" class="project-card">
+            <div class="browser-bar">
+              <span class="browser-dot" aria-hidden="true"></span><span class="browser-dot" aria-hidden="true"></span><span class="browser-dot" aria-hidden="true"></span>
+              <a :href="p.url" target="_blank" rel="noopener" class="browser-url" :aria-label="'Visit ' + p.title + ' (opens in new tab)'">
+                <span>{{ p.url.replace('https://','') }}</span>
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="project-img-box">
+              <img v-if="p.image" :src="p.image" :alt="p.title + ' screenshot'" loading="lazy" decoding="async" width="400" height="170" class="lb-trigger" @click="openLightbox(p.image, p.title + ' screenshot')" role="button" tabindex="0" @keydown.enter="openLightbox(p.image, p.title + ' screenshot')" :aria-label="'View full screenshot of ' + p.title">
+              <div v-else class="img-fallback">
+                <span class="img-fallback-mark">{{ p.slug.slice(0,2).toUpperCase() }}</span>
+                <span>Add a screenshot for {{ p.slug }}</span>
+              </div>
+            </div>
+            <div class="project-head">
+              <h3 class="project-name">{{ p.title }}</h3>
+            </div>
+            <div class="project-body">
+              <p class="project-desc">{{ p.desc }}</p>
+              <div class="chips-row">
+                <span v-for="t in p.tags" :key="t" class="chip">{{ t }}</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="load-more-row" v-if="visibleProjects < projects.length">
+          <button class="load-more-btn" @click="loadMoreProjects" aria-label="Load more projects">
+            Load more <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
 
-    <!-- JS CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- WOW Animation JS -->
-    <script src="./lib/WOW-master/dist/wow.min.js"></script>
-    <!-- Bootstrap JS Link -->
-    <script src="./lib/bootstrap-5/js/bootstrap.bundle.min.js"></script>
-    <!-- fancybox Image -->
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <!-- Slider JS Link -->
-    <script src="./lib/slick-1.8.1/slick/slick.min.js"></script>
-    <!-- Main JS Link -->
-    <script src="./assets/js/main.js"></script>
+    <!-- OPEN SOURCE -->
+    <section class="section-wrap">
+      <div class="container">
+        <h2 class="section-title">Open Source &amp; Side Projects</h2>
+        <p class="section-sub">Personal repos and community contributions.</p>
+        <div class="os-grid">
+          <a v-for="item in openSource.slice(0, visibleOpenSource)" :key="item.title" :href="item.url" target="_blank" rel="noopener" class="os-card" :aria-label="'Open ' + item.title + ' on GitHub'">
+            <div>
+              <div class="os-title">{{ item.title }}</div>
+              <div class="os-desc">{{ item.desc }}</div>
+            </div>
+            <i class="fa-brands fa-github os-icon" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="load-more-row" v-if="visibleOpenSource < openSource.length">
+          <button class="load-more-btn" @click="loadMoreOpenSource" aria-label="Load more open source repositories">
+            Load more <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section-wrap" id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-sub">Where I've worked.</p>
+        <div class="exp-grid">
+          <div v-for="exp in experience" :key="exp.company" class="exp-card">
+            <div class="exp-role-row">
+              <div class="exp-role">{{ exp.title }}</div>
+              <div class="exp-date">{{ exp.dates }}</div>
+            </div>
+            <div class="exp-company">{{ exp.company }} — {{ exp.location }}</div>
+            <p class="exp-summary">{{ exp.summary }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section-wrap" id="certificates">
+      <div class="container">
+        <h2 class="section-title">Certificates</h2>
+        <p class="section-sub">Courses and credentials I've picked up along the way.</p>
+        <div class="certs-grid">
+          <div v-for="cert in certificates.slice(0, visibleCerts)" :key="cert.name" class="cert-card">
+            <div class="cert-img-box">
+              <img v-if="cert.customImage" :src="cert.customImage" :alt="cert.name" loading="lazy" decoding="async" width="400" height="140" class="lb-trigger" @click="openLightbox(cert.customImage, cert.name)" role="button" tabindex="0" @keydown.enter="openLightbox(cert.customImage, cert.name)" :aria-label="'View full certificate: ' + cert.name">
+              <div v-else class="img-fallback">
+                <i :class="cert.icon" aria-hidden="true"></i>
+                <span class="img-fallback-label">On its way&hellip;</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-icon"><i :class="cert.icon" aria-hidden="true"></i></div>
+              <div>
+                <div class="cert-name">{{ cert.name }}</div>
+                <div class="cert-issuer">{{ cert.issuer }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="load-more-row" v-if="visibleCerts < certificates.length">
+          <button class="load-more-btn" @click="loadMoreCerts" aria-label="Load more certificates">
+            Load more <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="section-wrap" id="location">
+      <div class="container">
+        <div class="location-card">
+          <h2 class="section-title" style="margin-bottom:6px;">
+            <i class="fa-solid fa-map-location-dot" style="margin-right:8px;" aria-hidden="true"></i>Location
+          </h2>
+          <p class="section-sub" style="margin-bottom:0;">Based in Rawalpindi, Punjab, Pakistan — available for remote work worldwide.</p>
+          <div class="map-wrap">
+            <iframe title="Map showing Rawalpindi, Punjab, Pakistan" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212644.20875412217!2d72.94639912061033!3d33.582806282855215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df948974419acb%3A0x984357e18184ab04!2sRawalpindi%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section-wrap" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <h2 class="section-title" style="margin-bottom:8px;">Get in Touch</h2>
+          <p class="section-sub">Open to full-time remote roles and freelance WordPress / front-end contracts.</p>
+          <div class="contact-btn-row">
+            <button class="btn btn-blue" @click="copyEmail"><i class="fa-regular fa-copy" aria-hidden="true"></i><span>{{ copyBtnText }}</span></button>
+            <a :href="'tel:'+profile.phone" class="btn"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>{{ profile.phone }}</span></a>
+          </div>
+          <div class="social-row">
+            <a :href="profile.githubUrl"   target="_blank" rel="noopener" class="btn"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+            <a :href="profile.linkedinUrl" target="_blank" rel="noopener" class="btn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copy">© {{ year }} Muhammad Irtaza · Built with Vue 3</p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div v-if="lightbox.open" class="lb-overlay" @click.self="closeLightbox" role="dialog" aria-modal="true" :aria-label="lightbox.alt" @keydown.esc="closeLightbox" tabindex="-1" ref="lbOverlay">
+    <button class="lb-close" @click="closeLightbox" aria-label="Close image">&times;</button>
+    <div class="lb-frame">
+      <img :src="lightbox.src" :alt="lightbox.alt" class="lb-img">
+    </div>
+  </div>
+
+</div>
+
+<!-- Global App Script -->
+<script src="./js/app.js"></script>
 </body>
 </html>
